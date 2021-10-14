@@ -1,6 +1,5 @@
 package com.mac.book.springboot.domain.posts;
 
-import javafx.geometry.Pos;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,11 +16,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PostsRepositoryTest {
 
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postsRepository;
 
     @After
     public void cleanup() {
-        postRepository.deleteAll();
+        postsRepository.deleteAll();
     }
 
     //게시글 저장, 불러오기
@@ -31,10 +30,10 @@ public class PostsRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
-        postRepository.save(Posts.builder().title(title).content(content).author("guddndhk@naver.com").build());
+        postsRepository.save(Posts.builder().title(title).content(content).author("guddndhk@naver.com").build());
 
         //when
-        List<Posts> postsList = postRepository.findAll();
+        List<Posts> postsList = postsRepository.findAll();
 
         //then
         Posts posts = postsList.get(0);
