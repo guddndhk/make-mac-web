@@ -1,5 +1,6 @@
 package com.mac.book.springboot.domain.posts;
 
+import com.mac.book.springboot.domain.BaseTimeEntity;
 import lombok.Getter;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +28,7 @@ public class Posts {
 
     private String author;
 
+    //포스팅
     @Builder
     public Posts(String title, String content, String author) {
         this.title = title;
@@ -34,4 +36,10 @@ public class Posts {
         this.author = author;
     }
 
+    //업데이트
+    public void update(String title, String content) {
+
+        this.title = title;
+        this.content = content;
+    }
 }
