@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
-@RestController
+@RestController//컨트롤러를 JSON 을 반환하는 컨트롤러로 만들어줌 예전에는 ResponseBody 를 각 메소드마다 선언했던걸 한번에 처리해줌
 public class PostsApiController {
 
     private final PostsService postsService;
@@ -27,6 +27,8 @@ public class PostsApiController {
         return postsService.update(id, requestDto);
     }
 
+    //HTTP Method 인 Get 의 요청을 받을수 있는 API 를 만들어준다
+    //예전 스프링 프레임워크 프로젝트에서 @RequestMapping(method= RequestMethod.GET) 로 사용했던 기억이 남
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById (@PathVariable Long id) {
 
