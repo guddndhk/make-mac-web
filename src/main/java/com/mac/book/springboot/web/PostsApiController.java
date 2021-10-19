@@ -30,7 +30,7 @@ public class PostsApiController {
     //HTTP Method 인 Get 의 요청을 받을수 있는 API 를 만들어준다
     //예전 스프링 프레임워크 프로젝트에서 @RequestMapping(method= RequestMethod.GET) 로 사용했던 기억이 남
     @GetMapping("/api/v1/posts/{id}")
-    public PostsResponseDto findById (@PathVariable Long id) {
+    public PostsResponseDto findById(@PathVariable Long id) {
 
         return postsService.findById(id);
     }

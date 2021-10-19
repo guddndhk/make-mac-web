@@ -35,7 +35,7 @@ public class PostsApiControllerTest {
     private PostsRepository postsRepository;
 
     @After
-    public void tearDown() throws Exception{
+    public void tearDown() throws Exception {
 
         postsRepository.deleteAll();
     }
@@ -49,7 +49,7 @@ public class PostsApiControllerTest {
         PostsSavaRequestDto requestDto = PostsSavaRequestDto.builder().title(title).content(content).author("author")
                 .build();
 
-        String url = "http://localhost:"+ port + "/api/v1/posts";
+        String url = "http://localhost:" + port + "/api/v1/posts";
 
         //when
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
@@ -64,7 +64,7 @@ public class PostsApiControllerTest {
     }
 
     @Test
-    public void PostsUpdate() throws Exception{
+    public void PostsUpdate() throws Exception {
         //given
         Posts savePosts = postsRepository.save(Posts.builder()
                 .title("title")
@@ -82,7 +82,7 @@ public class PostsApiControllerTest {
                 .content(expectedContent)
                 .build();
 
-        String url = "http://localhost:" + port + "/api/v1/posts/"+ updateId;
+        String url = "http://localhost:" + port + "/api/v1/posts/" + updateId;
 
         HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
 
