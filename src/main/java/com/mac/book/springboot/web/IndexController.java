@@ -24,7 +24,7 @@ public class IndexController {
         //@ 기반으로 구축 하였기에 모든 컨트롤러는 @LoginUser 만 사용하면 세션 정보를 가져올 수 있다.
 
         //postsService.findAllDesc() 로 가져온 결과를 posts 로 index.mustache 에 전달
-        model.addAttribute("posts",postsService.findAllDesc());
+        model.addAttribute("posts", postsService.findAllDesc());
 
         //CumtomOauth2UserService 에서 로그인 성공 시 세션에 SessionUser 를 저장한다.
         //로그인 성공시 httpSession.getAttribute("user") 즉 세션에서 유저 값을 가져온다.

@@ -15,6 +15,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -42,6 +43,7 @@ public class PostsApiControllerTest {
 
     //등록기능
     @Test
+    @WithMockUser(roles = "User")
     public void postsUp() throws Exception {
         //given
         String title = "title";
@@ -64,6 +66,7 @@ public class PostsApiControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "User")
     public void PostsUpdate() throws Exception {
         //given
         Posts savePosts = postsRepository.save(Posts.builder()
