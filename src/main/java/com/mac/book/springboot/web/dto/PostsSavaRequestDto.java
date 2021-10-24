@@ -1,7 +1,6 @@
 package com.mac.book.springboot.web.dto;
 
 import com.mac.book.springboot.domain.posts.Posts;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
