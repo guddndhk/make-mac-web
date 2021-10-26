@@ -1,4 +1,4 @@
-package com.mac.book.springboot.web;
+package com.mac.book.springboot;
 import com.mac.book.springboot.config.auth.SecurityConfig;
 import com.mac.book.springboot.web.HelloController;
 import org.junit.Test;
