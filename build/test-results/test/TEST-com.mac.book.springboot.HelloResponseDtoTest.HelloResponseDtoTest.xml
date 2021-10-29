@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.mac.book.springboot.HelloResponseDtoTest.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-26T17:29:42" hostname="johyeong-uui-MacBook-Pro.local" time="0.086">
-  <properties/>
-  <testcase name="lombokTest" classname="com.mac.book.springboot.HelloResponseDtoTest.HelloResponseDtoTest" time="0.086"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
